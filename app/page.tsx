@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function OptinCard() {
   return (
-    <div className="flex flex-col w-[460px] mt-[6px] p-[28px] rounded-lg gap-[14px] shadow-[8px_8px_0px_var(--color-green)] bg-white border-[3px] border-solid border-ink">
+    <div className="flex flex-col w-full max-w-[460px] mt-[6px] p-5 sm:p-[28px] rounded-lg gap-[14px] shadow-[8px_8px_0px_var(--color-green)] bg-white border-[3px] border-solid border-ink">
       <div className="flex flex-col gap-[2px]">
         <div className="font-display text-lg tracking-tight text-ink">
           GET THE FREE GUIDE
@@ -74,7 +74,7 @@ function FeatureCard({
 }) {
   return (
     <div
-      className={`flex flex-col items-center w-[250px] py-[28px] px-[20px] rounded-lg gap-[14px] shrink-0 bg-yellow-tint border-2 border-solid border-ink`}
+      className="flex flex-col items-center w-full lg:w-[250px] py-[28px] px-[20px] rounded-lg gap-[14px] shrink-0 bg-yellow-tint border-2 border-solid border-ink"
       style={{ transform: `rotate(${rotate})` }}
     >
       <div
@@ -92,21 +92,21 @@ function FeatureCard({
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-[1440px] max-w-none mx-auto bg-white antialiased [font-synthesis:none]">
+    <div className="flex flex-col w-full max-w-[1440px] mx-auto bg-white antialiased [font-synthesis:none] overflow-x-hidden">
       {/* Top Bar */}
-      <div className="flex items-center justify-center w-full py-[28px] px-8 gap-[14px] bg-white">
-        <div className="font-display text-xl tracking-tight leading-none text-red">
+      <div className="flex flex-wrap items-center justify-center w-full py-4 px-4 gap-2 sm:gap-3 lg:py-[28px] lg:px-8 lg:gap-[14px] bg-white">
+        <div className="font-display text-lg lg:text-xl tracking-tight leading-none text-red">
           ADOBO&rsquo;ZON
         </div>
-        <div className="w-[5px] h-[5px] rounded-full shrink-0 bg-brown" />
-        <div className="font-body font-bold text-xs tracking-wider uppercase text-green">
+        <div className="w-[5px] h-[5px] rounded-full shrink-0 bg-brown hidden sm:block" />
+        <div className="font-body font-bold text-[10px] sm:text-xs tracking-wider uppercase text-green text-center">
           Adobo &amp; Saz&oacute;n in One Step
         </div>
       </div>
 
       {/* Hero */}
-      <div className="flex items-center justify-center w-full pt-[56px] pb-[88px] gap-8 px-[80px] bg-yellow-tint">
-        <div className="flex flex-col w-[520px] shrink-0 gap-[22px]">
+      <div className="flex flex-col lg:flex-row items-center justify-center w-full pt-10 pb-12 px-4 sm:px-8 lg:pt-[56px] lg:pb-[88px] lg:px-[80px] gap-10 lg:gap-8 bg-yellow-tint">
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left w-full max-w-[460px] lg:max-w-none lg:w-[520px] shrink-0 gap-4 lg:gap-[22px]">
           <div
             className="flex items-center w-fit py-1 px-2 rounded-full gap-1 bg-white border-2 border-solid border-blue"
             style={{ transform: "rotate(-2deg)" }}
@@ -118,19 +118,19 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-[2px]">
-            <div className="font-display tracking-tight text-ink text-5xl leading-[105%]">
+            <div className="font-display tracking-tight text-ink text-[2.5rem] sm:text-[3.5rem] lg:text-5xl leading-[105%]">
               COOK LIKE
             </div>
-            <div className="font-display tracking-tight text-red text-5xl leading-[105%]">
+            <div className="font-display tracking-tight text-red text-[2.5rem] sm:text-[3.5rem] lg:text-5xl leading-[105%]">
               ABUELA
             </div>
-            <div className="font-accent text-[44px] leading-[110%] mt-[4px] font-black italic text-green">
+            <div className="font-accent text-[1.75rem] sm:text-[2.5rem] lg:text-[44px] leading-[110%] mt-[4px] font-black italic text-green">
               tonight.
             </div>
           </div>
 
           <div className="flex">
-            <div className="font-body font-normal max-w-[460px] text-ink-dim text-lg leading-[165%]">
+            <div className="font-body font-normal max-w-full sm:max-w-[460px] text-ink-dim text-base lg:text-lg leading-[165%]">
               Grab 5 Abuela-Approved Recipes Using Adobo&rsquo;Zon, free, and
               bring real Puerto Rican flavor to your table tonight. No
               artificial anything, no fuss.
@@ -140,21 +140,30 @@ export default function Home() {
           <OptinCard />
         </div>
 
-        <div className="flex items-center justify-center w-[580px] h-[580px] shrink-0 relative">
+        <div
+          className="relative flex items-center justify-center shrink-0 aspect-square w-[clamp(260px,72vw,580px)] lg:w-[580px]"
+        >
           <div
-            className="absolute w-[480px] h-[480px] top-[50px] left-[40px] bg-green"
+            className="absolute bg-green"
             style={{
+              width: "82.76%",
+              height: "82.76%",
+              top: "8.62%",
+              left: "6.9%",
               borderRadius: "45% 55% 50% 50% / 50% 45% 55% 50%",
             }}
           />
-          <div className="absolute w-[520px] h-[520px] top-[30px] left-[20px] rounded-full border-[3px] border-dashed border-blue" />
+          <div
+            className="absolute rounded-full border-[3px] border-dashed border-blue"
+            style={{ width: "89.66%", height: "89.66%", top: "5.17%", left: "3.45%" }}
+          />
           <div
             className="absolute drop-shadow-[0_26px_30px_rgba(38,36,33,0.4)]"
             style={{
-              width: "589.22px",
-              height: "614.34px",
-              top: "-37px",
-              left: "8px",
+              width: "101.59%",
+              height: "105.92%",
+              top: "-6.38%",
+              left: "1.38%",
               transform: "rotate(4deg)",
             }}
           >
@@ -167,14 +176,20 @@ export default function Home() {
             />
           </div>
           <div
-            className="absolute flex items-center justify-center w-[108px] h-[108px] rounded-full bg-blue border-[3px] border-solid border-white shadow-[0_8px_18px_rgba(4,123,205,0.4)]"
-            style={{ top: "31px", left: "435px", transform: "rotate(16deg)" }}
+            className="absolute flex items-center justify-center rounded-full bg-blue border-[3px] border-solid border-white shadow-[0_8px_18px_rgba(4,123,205,0.4)]"
+            style={{
+              width: "18.62%",
+              height: "18.62%",
+              top: "5.34%",
+              left: "75%",
+              transform: "rotate(16deg)",
+            }}
           >
             <div className="flex flex-col items-center">
-              <div className="font-display text-lg leading-none text-white">
+              <div className="font-display text-[clamp(11px,3vw,18px)] leading-none text-white">
                 FREE
               </div>
-              <div className="font-body font-bold text-[9px] tracking-wide uppercase mt-[2px] leading-3 text-white">
+              <div className="font-body font-bold text-[clamp(6px,1.6vw,9px)] tracking-wide uppercase mt-[2px] leading-3 text-white">
                 Guide
               </div>
             </div>
@@ -183,7 +198,7 @@ export default function Home() {
       </div>
 
       {/* Story */}
-      <div className="flex flex-col items-center w-full py-[88px] px-[80px] gap-[20px] bg-green">
+      <div className="flex flex-col items-center w-full py-12 sm:py-16 px-4 sm:px-8 lg:py-[88px] lg:px-[80px] gap-[20px] bg-green">
         <div
           className="flex items-center py-1 px-[18px] rounded-full bg-white"
           style={{ transform: "rotate(-2deg)" }}
@@ -192,10 +207,10 @@ export default function Home() {
             ABUELA&rsquo;S ACENTO
           </div>
         </div>
-        <div className="font-display tracking-tight text-center max-w-[720px] text-white text-3xl leading-[105%]">
+        <div className="font-display tracking-tight text-center max-w-[720px] text-white text-2xl sm:text-3xl leading-[105%]">
           WHY MIRA MADE ADOBO&rsquo;ZON
         </div>
-        <div className="font-body max-w-[740px] text-center text-[#FFFFFFEB] text-lg leading-[165%]">
+        <div className="font-body max-w-[740px] text-center text-[#FFFFFFEB] text-base lg:text-lg leading-[165%]">
           Mira, a Holistic Life &amp; Nutrition Coach, spent years working
           through her own chronic pain and inflammation, looking hard at
           everything on her plate, including what was in her spice cabinet.
@@ -203,17 +218,17 @@ export default function Home() {
           tasted like home, so she made her own: all-natural, no artificial
           preservatives, colors, or dyes.
         </div>
-        <div className="font-accent text-xl text-center mt-[6px] font-black italic leading-[120%] text-yellow">
+        <div className="font-accent text-lg sm:text-xl text-center mt-[6px] font-black italic leading-[120%] text-yellow">
           Every jar carries a little of Abuela&rsquo;s acento.
         </div>
       </div>
 
       {/* Why Different */}
-      <div className="flex flex-col items-center w-full py-12 px-[80px] gap-[44px] bg-white">
-        <div className="font-display text-3xl tracking-tight text-center leading-[56px] text-ink">
+      <div className="flex flex-col items-center w-full py-12 px-4 sm:px-8 lg:px-[80px] gap-8 lg:gap-[44px] bg-white">
+        <div className="font-display text-2xl sm:text-3xl tracking-tight text-center leading-[130%] lg:leading-[56px] text-ink">
           WHY IT&rsquo;S DIFFERENT
         </div>
-        <div className="flex items-start justify-center w-full gap-[28px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:items-start lg:justify-center w-full gap-5 lg:gap-[28px]">
           <FeatureCard
             rotate="-1.5deg"
             iconBg="bg-red"
@@ -340,11 +355,11 @@ export default function Home() {
       </div>
 
       {/* Testimonial */}
-      <div className="flex flex-col items-center w-full py-12 px-[80px] gap-[22px] bg-blue-dark">
-        <div className="font-accent text-[80px] leading-none font-black text-yellow">
+      <div className="flex flex-col items-center w-full py-12 px-4 sm:px-8 lg:px-[80px] gap-[22px] bg-blue-dark">
+        <div className="font-accent text-5xl sm:text-6xl lg:text-[80px] leading-none font-black text-yellow">
           &ldquo;
         </div>
-        <div className="font-accent text-[30px] leading-[140%] text-center max-w-[780px] -mt-3 font-medium italic text-white">
+        <div className="font-accent text-xl sm:text-2xl lg:text-[30px] leading-[140%] text-center max-w-[780px] -mt-3 font-medium italic text-white">
           Hi Coach Mira, so today I made rice and beans and I marinated some
           pork chops last night. Wow, huge difference. It&rsquo;s got a very
           unique taste. I absolutely love it.
@@ -355,22 +370,22 @@ export default function Home() {
       </div>
 
       {/* Second CTA */}
-      <div className="flex flex-col items-center w-full pt-12 pb-[104px] gap-[28px] px-[80px] bg-yellow-tint">
-        <div className="font-display text-3xl tracking-tight text-center leading-[56px] text-ink">
+      <div className="flex flex-col items-center w-full pt-12 pb-16 lg:pb-[104px] gap-[28px] px-4 sm:px-8 lg:px-[80px] bg-yellow-tint">
+        <div className="font-display text-2xl sm:text-3xl tracking-tight text-center leading-[130%] lg:leading-[56px] text-ink">
           READY TO COOK LIKE ABUELA?
         </div>
-        <div className="font-body text-lg text-center text-ink-dim">
+        <div className="font-body text-base lg:text-lg text-center text-ink-dim">
           Get the free recipe guide + tips straight to your inbox.
         </div>
         <OptinCard />
       </div>
 
       {/* Footer */}
-      <div className="flex flex-col items-center w-full py-4 px-[80px] gap-[6px] bg-ink">
+      <div className="flex flex-col items-center w-full py-4 px-4 lg:px-[80px] gap-[6px] bg-ink">
         <div className="font-display text-[18px] leading-[22px] text-yellow">
           ADOBO&rsquo;ZON
         </div>
-        <div className="font-body text-[13px] text-[#FFFFFFB3]">
+        <div className="font-body text-[13px] text-[#FFFFFFB3] text-center">
           Orlando, FL &middot; Breaking Bread with Mira, Inc.
         </div>
       </div>
