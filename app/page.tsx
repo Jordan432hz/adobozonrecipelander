@@ -160,10 +160,10 @@ export default function Home() {
           <div
             className="absolute drop-shadow-[0_26px_30px_rgba(38,36,33,0.4)]"
             style={{
-              width: "101.59%",
-              height: "105.92%",
-              top: "-6.38%",
-              left: "1.38%",
+              width: "94.96%",
+              height: "104.09%",
+              top: "-6.03%",
+              left: "4.49%",
               transform: "rotate(4deg)",
             }}
           >
@@ -180,8 +180,8 @@ export default function Home() {
             style={{
               width: "18.62%",
               height: "18.62%",
-              top: "5.34%",
-              left: "75%",
+              top: "6.03%",
+              left: "71.47%",
               transform: "rotate(16deg)",
             }}
           >
