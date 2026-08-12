@@ -141,29 +141,29 @@ export default function Home() {
         </div>
 
         <div
-          className="relative flex items-center justify-center shrink-0 aspect-square w-[clamp(260px,72vw,580px)] lg:w-[580px]"
+          className="relative flex items-center justify-center shrink-0 aspect-[571/596] w-[clamp(260px,72vw,571px)] lg:w-[571px]"
         >
           <div
             className="absolute bg-green"
             style={{
-              width: "82.76%",
-              height: "82.76%",
-              top: "8.62%",
-              left: "6.9%",
+              width: "84.06%",
+              height: "80.54%",
+              top: "8.39%",
+              left: "7.01%",
               borderRadius: "45% 55% 50% 50% / 50% 45% 55% 50%",
             }}
           />
           <div
             className="absolute rounded-full border-[3px] border-dashed border-blue"
-            style={{ width: "89.66%", height: "89.66%", top: "5.17%", left: "3.45%" }}
+            style={{ width: "91.07%", height: "87.25%", top: "5.03%", left: "3.5%" }}
           />
           <div
             className="absolute drop-shadow-[0_26px_30px_rgba(38,36,33,0.4)]"
             style={{
-              width: "94.96%",
-              height: "104.09%",
-              top: "-6.03%",
-              left: "4.49%",
+              width: "96.46%",
+              height: "101.29%",
+              top: "-1.99%",
+              left: "0.81%",
               transform: "rotate(4deg)",
             }}
           >
@@ -178,10 +178,10 @@ export default function Home() {
           <div
             className="absolute flex items-center justify-center rounded-full bg-blue border-[3px] border-solid border-white shadow-[0_8px_18px_rgba(4,123,205,0.4)]"
             style={{
-              width: "18.62%",
-              height: "18.62%",
-              top: "6.03%",
-              left: "71.47%",
+              width: "18.91%",
+              height: "18.12%",
+              top: "9.76%",
+              left: "68.85%",
               transform: "rotate(16deg)",
             }}
           >
