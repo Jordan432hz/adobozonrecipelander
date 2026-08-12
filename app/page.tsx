@@ -148,18 +148,27 @@ export default function Home() {
             }}
           />
           <div className="absolute w-[520px] h-[520px] top-[30px] left-[20px] rounded-full border-[3px] border-dashed border-blue" />
-          <Image
-            src="/images/free-recipe-guide.png"
-            alt="Adobo'Zon Free Recipe Guide cover: 5 Abuela-Approved Recipes Using Adobo'Zon"
-            width={520}
-            height={520}
-            priority
-            className="absolute drop-shadow-[0_26px_30px_rgba(38,36,33,0.4)]"
-            style={{ top: "60px", left: "30px", transform: "rotate(4deg)" }}
-          />
           <div
-            className="absolute flex items-center justify-center w-[108px] h-[108px] top-[10px] right-[-10px] rounded-full bg-blue border-[3px] border-solid border-white shadow-[0_8px_18px_rgba(4,123,205,0.4)]"
-            style={{ transform: "rotate(12deg)" }}
+            className="absolute drop-shadow-[0_26px_30px_rgba(38,36,33,0.4)]"
+            style={{
+              width: "589.22px",
+              height: "614.34px",
+              top: "-37px",
+              left: "8px",
+              transform: "rotate(4deg)",
+            }}
+          >
+            <Image
+              src="/images/free-recipe-guide.png"
+              alt="Adobo'Zon Free Recipe Guide cover: 5 Abuela-Approved Recipes Using Adobo'Zon"
+              fill
+              priority
+              style={{ objectFit: "contain" }}
+            />
+          </div>
+          <div
+            className="absolute flex items-center justify-center w-[108px] h-[108px] rounded-full bg-blue border-[3px] border-solid border-white shadow-[0_8px_18px_rgba(4,123,205,0.4)]"
+            style={{ top: "31px", left: "435px", transform: "rotate(16deg)" }}
           >
             <div className="flex flex-col items-center">
               <div className="font-display text-lg leading-none text-white">
