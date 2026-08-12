@@ -78,7 +78,7 @@ function FeatureCard({
       style={{ transform: `rotate(${rotate})` }}
     >
       <div
-        className={`flex items-center justify-center shrink-0 rounded-full size-16 ${iconBg}`}
+        className={`flex items-center justify-center shrink-0 rounded-full size-8 ${iconBg}`}
       >
         {icon}
       </div>
@@ -105,7 +105,7 @@ export default function Home() {
       </div>
 
       {/* Hero */}
-      <div className="flex items-center justify-center w-full pt-[56px] pb-[88px] gap-16 px-[80px] bg-yellow-tint">
+      <div className="flex items-center justify-center w-full pt-[56px] pb-[88px] gap-8 px-[80px] bg-yellow-tint">
         <div className="flex flex-col w-[520px] shrink-0 gap-[22px]">
           <div
             className="flex items-center w-fit py-1 px-2 rounded-full gap-1 bg-white border-2 border-solid border-blue"
